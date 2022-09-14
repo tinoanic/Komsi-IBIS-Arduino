@@ -7,7 +7,7 @@ This Arduino Sketch connects the OMSI Bus Simulator to a LED-Display
 
 ## Hardware
 
-I used 4 4x64 LED Matrix Displays in series and mounted them black frame.
+I used 4 4x64 LED Matrix Displays in series and mounted them black on a frame.
 
 You can find the LEDs here: https://www.az-delivery.de/products/4-x-64er-led-matrix-display
 
@@ -26,7 +26,7 @@ You will need the following Libraries in you IDE:
 
 ## Installation
 
-In th .ino file you will find the SETTINGS-Secion. There you have to adapt all five settings according to your personal setup.
+In the .ino file you will find the SETTINGS-Secion. There you have to adapt all five settings according to your personal setup.
 
 Use your favourite compile and flash tool to upload the sketch to the Arduino board.
 
