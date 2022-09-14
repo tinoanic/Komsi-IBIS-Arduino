@@ -50,7 +50,7 @@ void setup()
   P.setZone(1, 13, 15);
   P.setFont(ExtASCII);
   P.setIntensity(2);
-  haltestellen_text = ("I.B.I.S. v1.41 Connect KOMSI");
+  haltestellen_text = ("I.B.I.S. v1.42 Connect KOMSI");
   P.setInvert(1, true);
   linien_text = "\x07";
 }
@@ -131,7 +131,7 @@ void analyzeReceivedString()
   {
     aktuelle_haltestelle = haltestelle_from_serial;
     alteHst = haltestelle_from_serial;
-    if (aktuelle_haltestelle != "")
+    if (aktuelle_haltestelle != "     ")
     {
       anzeigeZyklus = 3;
     }
