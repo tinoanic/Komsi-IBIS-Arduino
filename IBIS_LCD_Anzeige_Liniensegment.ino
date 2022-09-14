@@ -50,7 +50,7 @@ void setup()
   P.setZone(1, 13, 15);
   P.setFont(ExtASCII);
   P.setIntensity(2);
-  haltestellen_text = ("I.B.I.S. v1.23 Connect KOMSI");
+  haltestellen_text = ("I.B.I.S. v1.40 Connect KOMSI");
   P.setInvert(1, true);
   linien_text = "\x07";
 }

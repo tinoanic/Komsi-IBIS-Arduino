@@ -26,7 +26,7 @@ You will need the following Libraries in you IDE:
 
 ## Installation
 
-In th .ino file you will find the SETTINGS-Secion. There you have to adapt all five settings according to your personal setup.
+In the .ino file you will find the SETTINGS-Secion. There you have to adapt all five settings according to your personal setup.
 
 Use your favourite compile and flash tool to upload the sketch to the Arduino board.
 
