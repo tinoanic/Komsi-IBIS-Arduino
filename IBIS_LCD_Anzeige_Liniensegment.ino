@@ -55,6 +55,20 @@ void setup()
   linien_text = "\x07";
 }
 
+void loop()
+{
+
+  if (stringComplete)
+  {
+    analyzeReceivedString();
+  }
+  else
+  {
+    recvSerialWithEndMarker();
+  }
+  animateTheDisplay();
+}
+
 void displayWechsel()
 {
   if (stringComplete || firstStart)
@@ -70,6 +84,7 @@ void displayWechsel()
       break;
     case 3: // Anzeige Text Nächster Halt
       haltestellen_text = nextStopText;
+      P.displayClear(0);
       anzeigeZyklus = 4;
       break;
     case 4: // Anzeige Haltestellenname
@@ -156,18 +171,6 @@ void analyzeReceivedString()
   }
 }
 
-void loop()
-{
-
-  if (stringComplete)
-  {
-    analyzeReceivedString();
-  }
-  animateTheDisplay();
-
-  recvSerialWithEndMarker();
-}
-
 void animateTheDisplay()
 {
   if (P.displayAnimate())
@@ -176,9 +179,8 @@ void animateTheDisplay()
     {
       if (P.getZoneStatus(0))
       {
-        char dest[50];
-        memcpy(dest, haltestellen_text.c_str(), strlen(haltestellen_text.c_str()) + 1);
-        const char *cStyleTextString = dest;
+        
+        const char *cStyleTextString = haltestellen_text.c_str();
 
         if (haltestellen_text.length() > 17)
         {
@@ -233,6 +235,9 @@ void recvSerialWithEndMarker()
     }
   }
 }
+
+
+
 
 String getValue(String data, char separator, int index)
 {
